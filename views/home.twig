@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <section class="home-section--updates">
+        <h1>Updates</h1>
+        <ul class="update-list">
+            {% for post in updates %}
+                <li>{{post.content}}</li>
+            {% endfor %}
+        </ul>
+        {% if update_more %}
+            <a class="view-all" href="{{update_more}}">View All Updates</a>
+        {% endif %}
+    </section>
+    <section class="home-section--blog">
+        <h1>Blog</h1>
+        {% for post in blog %}
+            <article class="post-preview">
+                <h1 class="h2">{{post.title}}</h1>
+                <p>{{post.get_preview(30)}}</p>
+            </article>
+        {% endfor %}
+        {% if blog_more %}
+            <a class="view-all" href="{{blog_more}}">View All Blog Posts</a>
+        {% endif %}
+    </section>
+{% endblock %}

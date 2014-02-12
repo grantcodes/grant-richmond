@@ -1,0 +1,47 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{language_attributes}}> <!--<![endif]-->
+{% include 'partials/head.twig' %}
+
+    <body class="{{body_class}}">
+
+        <div class="main-wrapper">
+            {% block header %}
+                <header class="main-header" role='banner'>
+                    <h1 class="main-title">
+                        <a href="{{bloginfo('url')}}" rel="home">{{bloginfo('name')}}</a>
+                    </h1>
+                </header>
+            {% endblock %}
+
+            {% include 'partials/nav.twig' %}
+
+            <main role="main" class="main-content">
+                {% if title %}
+                    <header role="heading">
+                        <h1 class="posttitle p-name">{{title}}</h1>
+                    </header>
+                {% endif %}
+                <div class="wrapper">
+                    {% block content %}
+                    Sorry, no content
+                    {% endblock %}
+                    {% block after_content %}
+                        {% if pagination %}
+                            {% include 'partials/pagination.twig' %}
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            </main>
+
+            <footer class="main-footer">
+                <section class="footer-text">
+                    <p><a href="http://www.terminalpixel.co.uk/">Terminal Pixel</a></p>
+                </section>
+            </footer>
+        </div>
+        {{wp_footer}}
+    </body>
+</html>

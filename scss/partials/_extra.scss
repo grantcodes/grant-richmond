@@ -1,0 +1,21 @@
+.view-all,
+.read-more {
+    @extend %button;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    &:after {
+        @extend %tp-icon;
+        content: "\e600";
+        vertical-align: middle;
+    }
+}
+
+.posttitle {
+    text-align: center;
+}
+
+.category-pish .posttitle:before {
+    @extend %tp-icon;
+    content: "\e61c";
+}

@@ -1,0 +1,20 @@
+html, body {
+	-ms-overflow-x: hidden;
+	    overflow-x: hidden;
+
+    background: url(img/bg.png);
+    @include scut-hd-bp() {
+        background: url(img/bg@2X.png);
+        background-size: image-height('bg.png') image-width('bg.png');
+    }
+    background-attachment: fixed;
+}
+
+a {
+	color: $link-c;
+	@include transition(color $transition-fast);
+
+	&:hover, &:focus, &:active {
+		color: $link-hover-c;
+	}
+}

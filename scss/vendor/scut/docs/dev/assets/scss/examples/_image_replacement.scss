@@ -1,0 +1,14 @@
+/* hidden rules */
+.eg-image-replace {
+  margin-top: 1em;
+}
+/* end hidden rules */
+
+
+.eg-image-replace {
+  @extend %scut-image-replace;
+  // or @include scut-image-replace;
+  background: url(images/bird.jpg) no-repeat;
+  background-size: contain;
+  height: 8em;
+}

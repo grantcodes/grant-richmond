@@ -1,0 +1,74 @@
+%tp-grid {
+	@extend %scut-clearfix;
+	max-width: $grid-max-width;
+	padding: 0 $grid-padding;
+	margin: 0 auto;
+
+}
+
+.main-wrapper {
+}
+
+.main-header {
+	text-align: center;
+	padding: 0 $grid-padding;
+}
+
+.main-content {
+	@extend %tp-grid;
+}
+
+.main-nav {
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	.menu {
+		@extend %scut-list-unstyled;
+		@include at-breakpoint($mid-break lt-ie9) {
+			& > li {
+				display: inline-block;
+			}
+		}
+	}
+
+	.sub-menu {
+		@extend %scut-list-unstyled;
+		@include at-breakpoint($mid-break lt-ie9) {
+			position: absolute;
+			max-height: 0;
+			overflow: hidden;
+		}
+	}
+}
+
+.main-nav li:hover > .sub-menu,
+.sub-menu:hover {
+	@include at-breakpoint($mid-break lt-ie9) {
+		max-height: 99em;
+	}
+}
+
+.main-footer {
+	clear: both;
+	text-align: center;
+	padding: 0 $grid-padding;
+}
+
+.footer-widgets-wrapper {
+	@include at-breakpoint ($large-break lt-ie9) {
+		display: table;
+		width: 100%;
+	}
+}
+
+.footer-widgets {
+	@include at-breakpoint ($large-break lt-ie9) {
+		display: table-cell;
+		padding-left: $grid-padding;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}

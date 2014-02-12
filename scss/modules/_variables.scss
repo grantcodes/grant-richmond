@@ -1,0 +1,78 @@
+// Fonts
+
+$ratio: fourth();
+
+$font-size: 1;
+$line-height: ms($font-size, 1);
+
+$font-sans: 'p22-underground', Helvetica, Arial, sans-serif;
+$font-serif: Georgia, serif;
+$font-h: $font-sans;
+$font-body: $font-sans;
+
+
+
+// Break Points
+
+$mid-break: 30em;
+$large-break: 60em;
+
+// Grid
+
+$small-cols: 4;
+
+$mid-cols: 8;
+$mid-content-cols: 8;
+$mid-sidebar-cols: 3;
+
+$large-cols: 8;
+$large-content-cols: 8;
+$large-sidebar-cols: 4;
+
+$grid-padding: 1em;
+$column-width: 3;
+$grid-max-width: 30em;
+$gutter-width: 1.5;
+$container-style: fluid;
+$border-box-sizing: true;
+
+// Colors
+
+$base-color: #f0f0f0;
+// $highlight-color: #a28ddf; // Purple
+$highlight-color: #C14844; // Red
+// $highlight-color: #5E9130; // Green
+// $highlight-color: #2B4282; // Blue
+// $highlight-color: #CB628F; // Pink
+// $highlight-color: #A45837; // Orange
+
+$bgc: $base-color;
+$text-c: desaturate(shade($highlight-color, 40%), 30%);
+
+$link-c: $highlight-color;
+$link-hover-c: $text-c;
+
+$input-c: tint($text-c, 20%);
+$input-bgc: shade($bgc, 20%);
+$input-border-c: shade($input-bgc, 30%);
+
+$input-hover-c: $input-c;
+$input-hover-bgc: $input-bgc;
+$input-hover-border-c: $input-border-c;
+
+$input-active-c: $text-c;
+$input-active-bgc: $bgc;
+$input-active-border-c: $input-border-c;
+
+
+$button-c: $bgc;
+$button-bgc: $highlight-color;
+
+$button-hover-c: $button-c;
+$button-hover-bgc: shade($button-bgc, 30%);
+
+// Transition Times
+
+$transition-fast: .2s;
+$transition-mid: $transition-fast * 2;
+$transition-slow: $transition-mid * 2;

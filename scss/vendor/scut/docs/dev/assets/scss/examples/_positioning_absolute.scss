@@ -1,0 +1,23 @@
+/* hidden rules */
+.eg-absolute-container {
+  border: 5px solid $eg-dark;
+  height: 10em;
+  width: 15em;
+}
+.eg-absolute {
+  @extend %eg-dark-btn;
+}
+/* end hidden rules */
+
+.eg-absolute-container {
+  position: relative;
+}
+.eg-absolute {
+  &.m-1 {
+    // Default-values placeholder
+    @extend %scut-absolute;
+  }
+  &.m-2 {
+    @include scut-absolute(n 0.5em 1em n);
+  }
+}

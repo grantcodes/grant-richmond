@@ -1,0 +1,47 @@
+.home-section {
+   & > h1 {
+        text-align: center;
+    }
+}
+
+.home-section--blog {
+    @extend .home-section;
+
+    & > h1:before {
+        @extend %tp-icon;
+        content: "\e627";
+    }
+}
+
+.home-section--updates {
+    @extend .home-section;
+
+    & > h1:before {
+        @extend %tp-icon;
+        content: "\e61c";
+    }
+}
+
+.update-list {
+    @extend %scut-list-unstyled;
+    margin: 0;
+
+    li {
+        border-top: 1px solid lighten($bgc, 30%);
+        border-bottom: 1px solid darken($bgc, 10%);
+        &:first-child {
+            border-top: none;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.post-preview {
+    border-bottom: 1px solid darken($bgc, 5%);
+
+    h1 {
+        text-align: left;
+    }
+}

@@ -1,0 +1,15 @@
+.main-title {
+    @include at-breakpoint($mid-break lt-ie9) {
+        font-size: ms(4, $font-size) * 1em;
+    }
+    // font-size: 10vw;
+    margin-top: -.6em;
+    // margin-left: -100%;
+    // margin-right: -100%;
+    transition: margin-top $transition-mid;
+    .home &,
+    &:hover {
+        margin-top: 0;
+    }
+    line-height: 1;
+}

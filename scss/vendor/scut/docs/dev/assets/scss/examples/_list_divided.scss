@@ -1,0 +1,25 @@
+/* hidden rules */
+.eg-list-breadcrumb,
+.eg-list-divided {
+  margin-top: 1em;
+}
+/* end hidden rules */
+
+.eg-list-bar {
+  @extend %scut-list-bar;
+}
+.eg-list-breadcrumb {
+  @extend %scut-list-breadcrumb;
+}
+
+.eg-list-divided {
+  &.m-1 {
+    @include scut-list-divided("...", 0, right);
+  }
+  &.m-2 {
+    @include scut-list-divided("", 0.5em, left, 3em) {
+      background-color: $eg-dark;
+      width: 1em;
+    }
+  }
+}

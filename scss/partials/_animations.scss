@@ -1,0 +1,21 @@
+body {
+    @include animation(fadeIn $transition-slow);
+}
+
+@include animate-fadeIn(false);
+
+.main-title {
+    @include animation(slideInDown $transition-slow);
+}
+
+// @include animate-slideInDown(false);
+@include keyframes(slideInDown) {
+    0% {
+        opacity: 0;
+        @include transform(translateY(-2000px));
+    }
+
+    100% {
+        @include transform(translateY(0));
+    }
+}

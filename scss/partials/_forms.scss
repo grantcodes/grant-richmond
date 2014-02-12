@@ -1,0 +1,30 @@
+%input {
+	max-width: 100%;
+	display: inline-block;
+    font-size: ms(1, $font-size) * 1em;
+    padding: .3em .6em;
+    transition: all $transition-mid;
+}
+
+%button {
+	@extend %input;
+    display: block;
+    text-align: center;
+    background-color: $button-bgc;
+    color: $button-c;
+    font-weight: 800;
+    text-decoration: none;
+
+    @include scut-selected(true) {
+        background-color: $button-hover-bgc;
+        color: $button-hover-c;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+input, select, textarea {
+	@extend %input;
+}
