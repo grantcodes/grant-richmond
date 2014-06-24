@@ -19,3 +19,25 @@
     @extend %tp-icon;
     content: "\e61c";
 }
+
+// Profile links
+
+.dev-share-buttons-link {
+    @extend %tp-icon;
+    text-decoration: none;
+    font-size: ms(1, $font-size) * 1em;
+}
+
+.dev-share-buttons-link--twitter {
+    @extend .dev-share-buttons-link;
+    @extend .icon-social-twitter;
+}
+
+.dev-share-buttons-link--facebook {
+    @extend .dev-share-buttons-link;
+    @extend .icon-social-facebook;
+}
+
+.dev-share-buttons-link__text {
+    @extend %scut-hide-visually;
+}
